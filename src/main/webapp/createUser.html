@@ -1,0 +1,43 @@
+<html>
+
+<head>
+	<title>New User</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+	 crossorigin="anonymous">
+	<link rel="stylesheet" type=text/css href="createUser.css">
+	<link rel="stylesheet" type=text/css href="frontpage.css">
+	<link rel="stylesheet" type=text/css href="buttons.css">
+	<link rel="stylesheet" type=text/css href="textEditing.css">
+</head>
+
+<body class="bg-dark">
+	<div>
+		<button type="button" class="btn btn-outline-dark bg-info mediumButton" onclick="mainMenu()">Main Menu</button>
+	</div>
+
+	<div align="center" class="header">
+		<h1>Enter a Username:</h1>
+	</div>
+	<div align="center" class="createUserInput">
+		<input id="input1" type="text" class="createUserInputInner" placeholder="Enter your first name"></input>
+	</div>
+	<div align="center" class="createUserInput">
+		<input id="input2" type="text" class="createUserInputInner" placeholder="Enter your last name"></input>
+	</div>
+	<div align="center">
+		<button type="button" class="btn btn-outline-dark bg-info largeButton" onclick="createUser();">Create</button>
+	</div>
+	<div align='center'>
+		<p id="success" class="greenText"></p>
+	</div>
+	<div align="center">
+		<button type="button" id="hidingButton" class="btn btn-outline-dark bg-info largeButton" onclick="loginFromCreate();">Go to Login</button>
+	</div>
+</body>
+
+<script src="fetchingData.js"></script>
+<script src="UserClass.js"></script>
+<script src="CreateUser.js"></script>
+<script src="extraButtonFunctions.js"></script>
+
+</html>

@@ -1,0 +1,41 @@
+<html>
+
+<head>
+	<title>Update User</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+	 crossorigin="anonymous">
+	<link rel="stylesheet" type=text/css href="createUser.css">
+	<link rel="stylesheet" type=text/css href="frontpage.css">
+	<link rel="stylesheet" type=text/css href="buttons.css">
+	<link rel="stylesheet" type=text/css href="textEditing.css">
+</head>
+
+<body class="bg-dark">
+	<div>
+		<button type="button" class="btn btn-outline-dark bg-info mediumButton" onclick="mainMenu()">Main Menu</button>
+		<button type="button" class="btn btn-outline-dark bg-info mediumButton" onclick="userPage()">Back to your User</button>
+	</div>
+	<div align="center" class="header">
+		<h1>Enter a Username:</h1>
+	</div>
+	<div align="center" class="createUserInput">
+		<input id="input1" type="text" class="createUserInputInner" placeholder="Enter your first name"></input>
+	</div>
+	<div align="center" class="createUserInput">
+		<input id="input2" type="text" class="createUserInputInner" placeholder="Enter your last name"></input>
+	</div>
+	<div align="center">
+		<button type="button" class="btn-outline-dark bg-info largeButton" onclick="updateUser()">Update Username</button>
+	</div>
+	<div align='center' class="redText">
+		<p id="redirectAfterUpdate"></p>
+		<p id="remain"></p>
+	</div>
+</body>
+
+<script src="extraButtonFunctions.js"></script>
+<script src="fetchingData.js"></script>
+<script src="updateUser.js"></script>
+
+
+</html>

@@ -1,0 +1,33 @@
+<html>
+
+<head>
+	<title>Delete User</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+	 crossorigin="anonymous">
+	<link rel="stylesheet" type=text/css href="frontpage.css">
+	<link rel="stylesheet" type=text/css href="textEditing.css">
+	<link rel="stylesheet" type=text/css href="buttons.css">
+</head>
+
+<body class="bg-dark">
+	<div align="center" class="header">
+		<h1>Are you sure you want to delete your user?</h1>
+		<br>
+		<br>
+	</div>
+	<div align="center">
+		<button type="button" class="btn btn-outline-dark largest bg-danger largestButton" onclick="confirmDeleteUser();">Yes</button>
+	</div>
+	<div align='center' class="redText">
+		<p id="redirectAfterUpdate"></p>
+	</div>
+	<div align="center">
+		<button type="button" class="btn btn-outline-dark largest bg-info largestButton" onclick="userPage();">No</button>
+	</div>
+</body>
+
+<script src="fetchingData.js"></script>
+<script src="extraButtonFunctions.js"></script>
+<script src="deleteUser.js"></script>
+
+</html>

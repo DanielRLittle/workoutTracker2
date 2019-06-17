@@ -1,0 +1,30 @@
+.createUser {
+    margin: 2%;
+    padding: 1%;
+    border: 2px solid darkblue;
+    font-size: 2em;
+}
+
+.createUserInput {
+    margin: 2%;
+    padding: 1%;
+    font-size: 2em;
+    color: aqua;
+}
+
+.createUserInputInner {
+    border: 2px solid darkblue;
+    border-radius: 0.8em;
+    width: 17em;
+    height: 2.3em;
+}
+
+.buttonCreateUser {
+    border: 2px solid darkblue;
+}
+.buttonCreateUser div {
+    display: block;
+    position: relative;
+    height: 100%;
+    font-size: 2vw;
+}

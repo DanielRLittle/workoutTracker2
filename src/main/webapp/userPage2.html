@@ -1,0 +1,47 @@
+<html>
+
+<head>
+    <title>Workout Board</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+        crossorigin="anonymous">
+    <link rel="stylesheet" type=text/css href="buttons.css">
+    <link rel="stylesheet" type=text/css href="textEditing.css">
+    <link rel="stylesheet" type=text/css href="tableFormat.css">
+    <link rel="stylesheet" type=text/css href="userPage.css">
+</head>
+
+<body class="bg-dark">
+    <div align="center" class="bg-secondary">
+        <div class="divBorder">
+            <button type="button" class="fatButton btn btn-outline-dark bg-info" onclick="mainMenu();">Main Menu</button>
+            <button type="button" class="fatButton btn btn-outline-dark bg-info" onclick="checkAndDisplay();">Reveal User Info</button>
+            <button type="button" class="fatButton btn btn-outline-dark bg-info" onclick="hideData();">Hide User Info</button>
+            <button type="button" class="fatButton btn btn-outline-dark bg-info" onclick="updateUserPage();">Update Username</button>
+            <button type="button" class="fatButton btn btn-outline-dark bg-danger" onclick="deleteUser();">Delete User</button>
+        </div>
+    </div>
+    <div>
+        <table align="center" id="userTable" class="table table-dark mediumText">
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">First Name</th>
+                    <th scope="col">Last Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row" id="returningID"></th>
+                    <td id="firstName"></td>
+                    <td id="lastName"></td>
+                </tr>
+        </table>
+    </div>
+</body>
+
+<script src="fetchingData.js"></script>
+<script src="GetUser.js"></script>
+<script src="extraButtonFunctions.js"></script>
+<script src="deleteUser.js"></script>
+
+</html>
