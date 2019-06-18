@@ -1,6 +1,5 @@
 package com.qa.model;
 
-import javax.annotation.Generated;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -26,8 +25,8 @@ public class User {
 		return userName;
 	}
 	
-	public void setUserName() {
-		this.userName = firstName + lastName;
+	public void setUserName(String userName) {
+		this.userName = userName;
 	}
 	
 	public String getFirstName() {
