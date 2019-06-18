@@ -48,7 +48,19 @@ function hideData() {
 
 // hideData();
 
-function hideShowUser(idString) {
+function hideShowUser(idString, userObject) {
+    document.getElementById("returningID").innerText = userObject.id;
+    document.getElementById("firstName").innerText = userObject.firstName;
+    document.getElementById("lastName").innerText = userObject.lastName;
+    hideShow(idString);
+}
+
+function hideShowTable(idString) {
+    hideShow(idString);
+}
+
+
+function hideShow(idString) {
     let x = document.getElementById(idString);
     if (window.getComputedStyle(x).visibility === "visible") {
         x.style.visibility="hidden";
