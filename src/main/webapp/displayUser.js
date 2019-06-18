@@ -1,1 +1,1 @@
-fillUser();
+fillUser(output);

@@ -68,7 +68,7 @@ function hideShow(idString) {
     }
 }
 
-function fillUser() {
+function fillUser(userObject) {
     document.getElementById("returningID").innerText = userObject.id;
     document.getElementById("firstName").innerText = userObject.firstName;
     document.getElementById("lastName").innerText = userObject.lastName;
