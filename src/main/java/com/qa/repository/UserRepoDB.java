@@ -18,6 +18,7 @@ public class UserRepoDB implements UserRepo{
 	
 	@Transactional(value = TxType.REQUIRED)
 	public User createUser(User user) {
+		user.setUserName();
 		em.persist(user);
 		return user;
 	}
