@@ -48,14 +48,30 @@ function hideData() {
 
 // hideData();
 
-function hideShowUserTable() {
-    let x = document.getElementById("userTable");
+function hideShowUser(idString, userObject) {
+    
+    hideShow(idString);
+}
+
+function hideShowTable(idString) {
+    hideShow(idString);
+}
+
+
+function hideShow(idString) {
+    let x = document.getElementById(idString);
     if (window.getComputedStyle(x).visibility === "visible") {
         x.style.visibility="hidden";
     }
     else {
         x.style.visibility="visible";
     }
+}
+
+function fillUser(userObject) {
+    document.getElementById("returningID").innerText = userObject.id;
+    document.getElementById("firstName").innerText = userObject.firstName;
+    document.getElementById("lastName").innerText = userObject.lastName;
 }
 
 // console.log(findStyle());
