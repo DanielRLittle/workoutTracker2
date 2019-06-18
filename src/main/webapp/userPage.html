@@ -14,14 +14,14 @@
     <div align="center" class="bg-secondary">
         <div class="divBorder">
             <button type="button" class="fatButton btn btn-outline-dark bg-info" onclick="mainMenu();">Main Menu</button>
-            <button type="button" class="fatButton btn btn-outline-dark bg-info" onclick="checkAndDisplay();">Reveal User Info</button>
-            <button type="button" class="fatButton btn btn-outline-dark bg-info" onclick="hideData();">Hide User Info</button>
+            <button type="button" class="fatButton btn btn-outline-dark bg-info" onclick="hideShowUserTable();">Hide/Show User Info</button>
+            <button type="button" class="fatButton btn btn-outline-dark bg-info" onclick="hideShowWorkouts;">Hide/Show Workouts</button>
             <button type="button" class="fatButton btn btn-outline-dark bg-info" onclick="updateUserPage();">Update Username</button>
             <button type="button" class="fatButton btn btn-outline-dark bg-danger" onclick="deleteUser();">Delete User</button>
         </div>
     </div>
     <div>
-        <table align="center" id="userTable" class="table table-dark mediumText">
+        <table id="userTable" class="table table-dark mediumText">
             <thead>
                 <tr>
                     <th scope="col">ID</th>
@@ -35,6 +35,20 @@
                     <td id="firstName"></td>
                     <td id="lastName"></td>
                 </tr>
+            </tbody>
+        </table>
+    </div>
+    <div>
+        <table id="workoutTable" class="table table-dark mediumText">
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Workout</th>
+                    <th scope="col">Exercises</th>
+                </tr>
+            </thead>
+            <tbody id = "workouts second row">
+            </tbody>
         </table>
     </div>
 </body>

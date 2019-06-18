@@ -39,7 +39,6 @@ function checkUser() {
 
 function checkAndDisplay() {
     checkUser();
-
     displayUser();
 }
 
@@ -47,4 +46,16 @@ function hideData() {
     document.getElementById("userTable").style.visibility="hidden";
 }
 
-hideData();
+// hideData();
+
+function hideShowUserTable() {
+    let x = document.getElementById("userTable");
+    if (window.getComputedStyle(x).visibility === "visible") {
+        x.style.visibility="hidden";
+    }
+    else {
+        x.style.visibility="visible";
+    }
+}
+
+// console.log(findStyle());
