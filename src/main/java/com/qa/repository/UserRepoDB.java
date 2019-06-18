@@ -26,6 +26,11 @@ public class UserRepoDB implements UserRepo{
 		User user = em.find(User.class, id);
 		return user;
 	}
+	
+	public User readUser(String userName) {
+		User user = em.find(User.class, userName);
+		return user;
+	}
 
 	public List<User> readAll() {
 		TypedQuery<User> q = em.createQuery("Select use from User use", User.class);

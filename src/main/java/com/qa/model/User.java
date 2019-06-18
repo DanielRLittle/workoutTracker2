@@ -1,5 +1,6 @@
 package com.qa.model;
 
+import javax.annotation.Generated;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -12,6 +13,7 @@ public class User {
 	int id;
 	String firstName;
 	String lastName;
+	String userName;
 	
 	public int getId() {
 		return id;
@@ -19,6 +21,15 @@ public class User {
 	public void setId(int id) {
 		this.id = id;
 	}
+	
+	public String getUserName() {
+		return userName;
+	}
+	
+	public void setUserName() {
+		this.userName = firstName + lastName;
+	}
+	
 	public String getFirstName() {
 		return firstName;
 	}

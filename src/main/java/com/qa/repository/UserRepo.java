@@ -10,6 +10,8 @@ public interface UserRepo {
 	
 	public User readUser(int id);
 	
+	public User readUser(String userName);
+	
 	public List<User> readAll();
 	
 	public User updateUser(int id, User newUser);
