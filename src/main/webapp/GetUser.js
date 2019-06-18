@@ -49,9 +49,7 @@ function hideData() {
 // hideData();
 
 function hideShowUser(idString, userObject) {
-    document.getElementById("returningID").innerText = userObject.id;
-    document.getElementById("firstName").innerText = userObject.firstName;
-    document.getElementById("lastName").innerText = userObject.lastName;
+    
     hideShow(idString);
 }
 
@@ -68,6 +66,12 @@ function hideShow(idString) {
     else {
         x.style.visibility="visible";
     }
+}
+
+function fillUser() {
+    document.getElementById("returningID").innerText = userObject.id;
+    document.getElementById("firstName").innerText = userObject.firstName;
+    document.getElementById("lastName").innerText = userObject.lastName;
 }
 
 // console.log(findStyle());
