@@ -48,8 +48,8 @@ function hideData() {
 
 // hideData();
 
-function hideShowUserTable() {
-    let x = document.getElementById("userTable");
+function hideShowUser(idString) {
+    let x = document.getElementById(idString);
     if (window.getComputedStyle(x).visibility === "visible") {
         x.style.visibility="hidden";
     }
