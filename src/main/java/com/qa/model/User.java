@@ -25,8 +25,8 @@ public class User {
 		return userName;
 	}
 	
-	public void setUserName(String userName) {
-		this.userName = userName;
+	public void setUserName() {
+		this.userName = this.firstName + this.lastName;
 	}
 	
 	public String getFirstName() {
