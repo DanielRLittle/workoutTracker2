@@ -66,7 +66,7 @@ public class UserEndPoints {
 	@Path("/users")
 	public Response addUser(User user, @Context UriInfo uriInfo) {
 		user = ur.createUser(user);
-		URI createdURI = uriInfo.getBaseUriBuilder().path(""+user.getId()).build();
+		URI createdURI = uriInfo.getBaseUriBuilder().path(""+user.getUserName()).build();
 		System.out.println(createdURI);
 		return Response.ok(createdURI.toString()).status(Status.CREATED).build();
 	}
