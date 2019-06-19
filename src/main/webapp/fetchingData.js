@@ -1,4 +1,5 @@
 const urlNeeded = "http://35.242.137.2:8080/workoutTracker-1.0/api/users/";
+const urlByUser = `http://35.242.137.2:8080/workoutTracker-1.0/api/users/username/${inputNames}`;
 
 function requestData(url, method, body) {
     return new Promise((resolve, reject) => {
