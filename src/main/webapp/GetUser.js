@@ -32,6 +32,7 @@ function getUser() {
     requestData(urlByUser, "GET", "").then((x) =>{
         let data = JSON.parse(x.responseText);
         console.log(data);
+        console.log(data.firstName);
     });
 }
 
