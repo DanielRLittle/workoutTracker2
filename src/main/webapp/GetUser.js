@@ -30,6 +30,7 @@ function getUser() {
     let inputNames = input1 + input2;
     requestData(urlByUser, "GET", "").then((x) =>{
         let data = JSON.parse(x.responseText);
+        console.log(data);
     });
 }
 
@@ -56,8 +57,6 @@ function hideData() {
     document.getElementById("userTable").style.visibility="hidden";
 }
 
-// hideData();
-
 function hideShowUser(idString, userObject) {
     
     hideShow(idString);
@@ -83,5 +82,3 @@ function fillUser(userObject) {
     document.getElementById("firstName").innerText = userObject.firstName;
     document.getElementById("lastName").innerText = userObject.lastName;
 }
-
-// console.log(findStyle());
