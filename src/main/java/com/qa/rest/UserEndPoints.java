@@ -50,7 +50,7 @@ public class UserEndPoints {
 	}
 	
 	@GET
-	@Path("users/{userName}")
+	@Path("users/userName/{userName}")
 	@Produces(MediaType.APPLICATION_JSON)
 	public Response getUserByName(@PathParam("userName") String userName) {
 		if (ur.readUser(userName).equals(null)) {
