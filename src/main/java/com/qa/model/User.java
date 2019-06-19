@@ -45,6 +45,7 @@ public class User {
 	public void setAll(User newUser) {
 		this.firstName = newUser.firstName;
 		this.lastName = newUser.lastName;
+		this.userName= newUser.firstName + newUser.lastName;
 	}
 }
 
