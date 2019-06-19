@@ -10,7 +10,7 @@ public interface UserRepo {
 	
 	public User readUser(int id);
 	
-	public User readUser2(String userName);
+	public User readUser(String userName);
 	
 	public List<User> readAll();
 	
