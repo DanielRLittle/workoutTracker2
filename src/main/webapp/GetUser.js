@@ -33,6 +33,8 @@ function getUser() {
         let data = JSON.parse(x.responseText);
         console.log(data);
         console.log(data.firstName);
+        window.sessionStorage.setItem("User", JSON.stringify(data));
+        window.location.href = getUserPage;
     });
 }
 
