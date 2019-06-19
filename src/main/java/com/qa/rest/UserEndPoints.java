@@ -53,10 +53,10 @@ public class UserEndPoints {
 	@Path("/users/username/{userName}")
 	@Produces(MediaType.APPLICATION_JSON)
 	public Response getUserByName(@PathParam("userName") String userName) {
-		if (ur.readUser(userName).equals(null)) {
+		if (ur.readUser2(userName).equals(null)) {
 			return Response.status(Status.NOT_FOUND).build();
 		}
-		User user = ur.readUser(userName);
+		User user = ur.readUser2(userName);
 		return Response.ok(user).build();
 	}
 	

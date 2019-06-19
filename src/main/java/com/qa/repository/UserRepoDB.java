@@ -28,7 +28,7 @@ public class UserRepoDB implements UserRepo{
 		return user;
 	}
 	
-	public User readUser(String userName) {
+	public User readUser2(String userName) {
 		User user = em.find(User.class, userName);
 		return user;
 	}
