@@ -18,7 +18,7 @@ function getUser() {
         window.location.href = getUserPage;
     });
     setTimeout(() => {
-    }, 100);
+    }, 750);
     document.getElementById("failed").innerText = "Incorrect login details, please enter a valid name."
 }
 
