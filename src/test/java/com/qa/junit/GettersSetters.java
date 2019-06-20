@@ -7,7 +7,7 @@ import org.junit.Test;
 
 import com.qa.model.User;
 
-public class TestExample {
+public class GettersSetters {
 
 	User user;
 	
@@ -28,5 +28,15 @@ public class TestExample {
 	public void testingLastName() {
 		user.setLastName("H");
 		assertEquals("H", user.getLastName());
+	}
+	
+	@Test
+	public void testUserName() {
+		String fName = "xxx";
+		String lName = "yyy";
+		user.setFirstName(fName);
+		user.setLastName(lName);
+		user.setUserName();
+		assertEquals("xxxyyy", user.getUserName());
 	}
 }
