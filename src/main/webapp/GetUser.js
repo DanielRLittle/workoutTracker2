@@ -17,6 +17,8 @@ function getUser() {
         window.sessionStorage.setItem("User", JSON.stringify(data));
         window.location.href = getUserPage;
     });
+    setTimeout(() => {
+    }, 100);
     document.getElementById("failed").innerText = "Incorrect login details, please enter a valid name."
 }
 
