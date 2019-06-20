@@ -19,3 +19,6 @@ function createdText() {
     textTime(3000, "success");
 }
 
+function onlyAlphabets(e, t) {
+        return (e.charCode > 64 && e.charCode < 91) || (e.charCode > 96 && e.charCode < 123) || e.charCode == 32;   
+    }
