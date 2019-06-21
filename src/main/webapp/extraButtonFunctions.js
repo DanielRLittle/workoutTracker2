@@ -1,4 +1,5 @@
 function mainMenu() {
+    window.sessionStorage.removeItem("User");
     window.location.href = './frontpage.html';
 }
 

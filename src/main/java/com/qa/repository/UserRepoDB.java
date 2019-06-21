@@ -18,6 +18,7 @@ public class UserRepoDB implements UserRepo{
 	
 	@Transactional(value = TxType.REQUIRED)
 	public User createUser(User user) {
+		user.setUserName();
 		em.persist(user);
 		return user;
 	}
@@ -27,6 +28,12 @@ public class UserRepoDB implements UserRepo{
 		return user;
 	}
 
+	public User readUser(String userName) {
+		TypedQuery<User> tQ = em.createQuery("select user from User user where userName = '" + userName + "'", User.class);
+		User user = tQ.getSingleResult();
+		return user;
+	}
+	
 	public List<User> readAll() {
 		TypedQuery<User> q = em.createQuery("Select use from User use", User.class);
 		List<User> list = q.getResultList();
