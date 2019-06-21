@@ -3,6 +3,8 @@ package com.qa.model;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
 
 @Entity
 public class User {
@@ -13,6 +15,10 @@ public class User {
 	String firstName;
 	String lastName;
 	String userName;
+	
+	@OneToMany
+	@JoinColumn(name = "User_id")
+	
 	
 	public int getId() {
 		return id;
