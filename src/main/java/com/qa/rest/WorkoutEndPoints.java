@@ -28,7 +28,7 @@ public class WorkoutEndPoints {
 	UserRepo ur;
 	
 	@GET
-	@Path("/workout/{workout_id}")
+	@Path("/workouts/{workout_id}")
 	@Produces(MediaType.APPLICATION_JSON)
 	public Response getWorkoutById(@PathParam("workout_id") int id) {
 		if (wr.findWorkout(id).equals(null)) {
