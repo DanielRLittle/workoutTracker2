@@ -7,4 +7,5 @@ public interface WorkoutRepo {
 	
 	public User addWorkout(Workout w, int id);
 	
+	public Workout findWorkout(int id);
 }

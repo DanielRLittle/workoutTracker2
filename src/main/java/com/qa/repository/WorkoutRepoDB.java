@@ -21,4 +21,12 @@ public class WorkoutRepoDB implements WorkoutRepo{
 		user.addWorkouts(w);
 		return user;
 	}
+
+	public Workout findWorkout(int id) {
+		Workout w = em.find(Workout.class, id);
+		return w;
+	}
+	
+	
+	
 }

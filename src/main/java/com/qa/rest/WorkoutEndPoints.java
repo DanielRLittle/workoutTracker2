@@ -2,6 +2,7 @@ package com.qa.rest;
 
 import javax.inject.Inject;
 import javax.ws.rs.Consumes;
+import javax.ws.rs.GET;
 import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
@@ -23,6 +24,17 @@ public class WorkoutEndPoints {
 	
 	@Inject
 	UserRepo ur;
+	
+	@GET
+	@Path("/workout/{workout_id}")
+	@Produces(MediaType.APPLICATION_JSON)
+	public Response getWorkoutById(@PathParam("workout_id") int id) {
+		if (wr.findWorkout(id).equals(null)) {
+			return Response.status(Status.NOT_FOUND).build();
+		}
+		Workout w = wr.findWorkout(id);
+		return Response.ok(w).build();
+	}
 	
 	@PUT
 	@Consumes({"application/json"})
