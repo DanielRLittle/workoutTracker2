@@ -1,6 +1,6 @@
 package com.qa.model;
 
-import java.util.List;
+import java.util.Set;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -20,7 +20,7 @@ public class User {
 	
 	@OneToMany
 	@JoinColumn(name = "User_id")
-	private List<Workout> workouts;
+	private Set<Workout> workouts;
 	
 	public int getId() {
 		return id;
@@ -55,13 +55,18 @@ public class User {
 		this.lastName = newUser.lastName;
 		this.userName= newUser.firstName + newUser.lastName;
 	}
-	public List<Workout> getWorkouts() {
+	public Set<Workout> getWorkouts() {
 		return workouts;
 	}
-	public void setWorkouts(List<Workout> workouts) {
-		this.workouts = workouts;
+	public Set<Workout> addWorkouts(Workout w) {
+		workouts.add(w);
+		return workouts;
 	}
 	
+	public Set<Workout> removeWorkouts(Workout w) {
+		workouts.remove(w);
+		return workouts;
+	}
 	
 }
 
