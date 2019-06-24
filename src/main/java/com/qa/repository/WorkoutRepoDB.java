@@ -1,9 +1,9 @@
 package com.qa.repository;
 
-import java.util.Set;
-
+import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.TypedQuery;
 import javax.transaction.Transactional;
 import javax.transaction.Transactional.TxType;
 
@@ -29,9 +29,9 @@ public class WorkoutRepoDB implements WorkoutRepo{
 		return w;
 	}
 
-	public Set<Workout> findWorkoutByUser(int id) {
-		User user = em.find(User.class, id);
-		Set<Workout> w = user.getWorkouts();
+	public List<Workout> findWorkoutByUser(int id) {
+		TypedQuery<Workout> tQ = em.createQuery("Select w from Workout w WHERE user_id = '" + id + "'", Workout.class);
+		List<Workout> w = tQ.getResultList();
 		return w;
 	}
 }

@@ -1,7 +1,6 @@
 package com.qa.repository;
 
-import java.util.Set;
-
+import java.util.List;
 import com.qa.model.User;
 import com.qa.model.Workout;
 
@@ -11,5 +10,5 @@ public interface WorkoutRepo {
 	
 	public Workout findWorkout(int id);
 	
-	public Set<Workout> findWorkoutByUser(int id);
+	public List<Workout> findWorkoutByUser(int id);
 }
