@@ -8,6 +8,7 @@ import javax.transaction.Transactional.TxType;
 import com.qa.model.User;
 import com.qa.model.Workout;
 
+@Transactional(value = TxType.SUPPORTS)
 public class WorkoutRepoDB implements WorkoutRepo{
 	
 	
