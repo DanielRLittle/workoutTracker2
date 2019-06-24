@@ -1,5 +1,7 @@
 package com.qa.repository;
 
+import java.util.Set;
+
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.transaction.Transactional;
@@ -26,7 +28,10 @@ public class WorkoutRepoDB implements WorkoutRepo{
 		Workout w = em.find(Workout.class, id);
 		return w;
 	}
-	
-	
-	
+
+	public Set<Workout> findWorkoutByUser(int id) {
+		User user = em.find(User.class, id);
+		Set<Workout> w = user.getWorkouts();
+		return w;
+	}
 }

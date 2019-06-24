@@ -1,5 +1,7 @@
 package com.qa.rest;
 
+import java.util.Set;
+
 import javax.inject.Inject;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
@@ -33,6 +35,17 @@ public class WorkoutEndPoints {
 			return Response.status(Status.NOT_FOUND).build();
 		}
 		Workout w = wr.findWorkout(id);
+		return Response.ok(w).build();
+	}
+	
+	@GET
+	@Path("/workout/{user_id}")
+	@Produces(MediaType.APPLICATION_JSON)
+	public Response getWorkoutByUser(@PathParam("user_id") int id) {
+		if (wr.findWorkoutByUser(id).equals(null)) {
+			return Response.status(Status.NOT_FOUND).build();
+		}
+		Set<Workout> w = wr.findWorkoutByUser(id);
 		return Response.ok(w).build();
 	}
 	
