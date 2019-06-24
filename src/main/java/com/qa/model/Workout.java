@@ -9,7 +9,7 @@ public class Workout {
 	
 	@Id
 	@GeneratedValue
-	int id;
+	private int id;
 	private String workoutName;
 	private String workoutDescription;
 	

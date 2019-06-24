@@ -2,6 +2,7 @@ package com.qa.model;
 
 import java.util.Set;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -18,7 +19,7 @@ public class User {
 	private String lastName;
 	private String userName;
 	
-	@OneToMany
+	@OneToMany(cascade = (CascadeType.ALL))
 	@JoinColumn(name = "User_id")
 	private Set<Workout> workouts;
 	

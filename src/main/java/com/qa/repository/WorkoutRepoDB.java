@@ -21,5 +21,4 @@ public class WorkoutRepoDB implements WorkoutRepo{
 		user.addWorkouts(w);
 		return user;
 	}
-
 }
