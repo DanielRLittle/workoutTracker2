@@ -1,7 +1,5 @@
 package com.qa.model;
 
-import java.util.Date;
-
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
@@ -10,9 +8,8 @@ public class Workout {
 	@Id
 	@GeneratedValue
 	int id;
-	String workoutName;
-	String workoutDescription;
-	Date workoutDate;
+	private String workoutName;
+	private String workoutDescription;
 	
 	
 	public int getId() {

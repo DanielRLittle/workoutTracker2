@@ -13,14 +13,14 @@ public class User {
 	
 	@Id
 	@GeneratedValue
-	int id;
-	String firstName;
-	String lastName;
-	String userName;
+	private int id;
+	private String firstName;
+	private String lastName;
+	private String userName;
 	
 	@OneToMany
 	@JoinColumn(name = "User_id")
-	List<Workout> workouts;
+	private List<Workout> workouts;
 	
 	public int getId() {
 		return id;
