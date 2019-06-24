@@ -1,7 +1,6 @@
 package com.qa.rest;
 
-import java.util.Set;
-
+import java.util.List;
 import javax.inject.Inject;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
@@ -45,7 +44,7 @@ public class WorkoutEndPoints {
 		if (wr.findWorkoutByUser(id).equals(null)) {
 			return Response.status(Status.NOT_FOUND).build();
 		}
-		Set<Workout> w = wr.findWorkoutByUser(id);
+		List<Workout> w = wr.findWorkoutByUser(id);
 		return Response.ok(w).build();
 	}
 	
