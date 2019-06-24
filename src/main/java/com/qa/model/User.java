@@ -58,6 +58,7 @@ public class User {
 	public Set<Workout> getWorkouts() {
 		return workouts;
 	}
+	
 	public Set<Workout> addWorkouts(Workout w) {
 		workouts.add(w);
 		return workouts;
