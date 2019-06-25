@@ -3,6 +3,7 @@ package com.qa.rest;
 import java.util.List;
 import javax.inject.Inject;
 import javax.ws.rs.Consumes;
+import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
 import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
@@ -70,5 +71,15 @@ public class WorkoutEndPoints {
 		}
 		Workout w = wr.changeWorkout(id, newWorkout);
 		return Response.ok(w).build();
+	}
+	
+	@DELETE
+	@Path("/workouts/{workout_id}")
+	public Response removeWorkout(@PathParam("id") int id) {
+		if (wr.findWorkout(id).equals(null)) {
+			return Response.status(Status.NOT_FOUND).build();
+		}
+		wr.deleteWorkout(id);
+		return Response.noContent().build();
 	}
 }

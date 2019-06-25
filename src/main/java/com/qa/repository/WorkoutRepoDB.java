@@ -41,6 +41,11 @@ public class WorkoutRepoDB implements WorkoutRepo{
 		w.setAll(newWorkout);
 		return w;
 	}
+
+	@Transactional(value = TxType.REQUIRED)
+	public void deleteWorkout(int id) {
+		em.remove(findWorkout(id));
+	}
 	
 	
 }

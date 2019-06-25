@@ -83,7 +83,6 @@ public class UserEndPoints {
 		return Response.ok(user2).build();
 	}
 	
-	
 	@DELETE
 	@Path("/users/{id}")
 	public Response removeUser(@PathParam("id") int id) {
