@@ -25,8 +25,8 @@ function getUser() {
 }
 
 function getWorkouts() {
+    let userID = output.id;
     const urlWorkouts = `http://35.242.137.2:8080/workoutTracker-1.0/api/workout/${userID}`
-    userID = output.id;
     requestData(urlWorkouts, "GET", "").then((x) => {
         let workoutData = JSON.parse(x.responseText);
         console.log(workoutData);
