@@ -59,4 +59,16 @@ public class WorkoutEndPoints {
 		User user = wr.addWorkout(workout, id);
 		return Response.ok(user).build();
 	}
+	
+	@PUT
+	@Consumes({"application/json"})
+	@Produces(MediaType.TEXT_PLAIN)
+	@Path("/workouts/{workout_id}")
+	public Response updateWorkout(Workout newWorkout, @PathParam("workout_id") int id) {
+		if (wr.findWorkout(id).equals(null)) {
+			return Response.status(Status.NOT_FOUND).build();
+		}
+		Workout w = wr.changeWorkout(id, newWorkout);
+		return Response.ok(w).build();
+	}
 }

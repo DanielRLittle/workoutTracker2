@@ -33,4 +33,9 @@ public class Workout {
 		this.workoutDescription = workoutDescription;
 	}
 	
+	public void setAll(Workout newWorkout) {
+		this.workoutName = newWorkout.workoutName;
+		this.workoutDescription = newWorkout.workoutDescription;
+	}
+	
 }

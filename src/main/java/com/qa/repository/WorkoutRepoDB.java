@@ -34,4 +34,13 @@ public class WorkoutRepoDB implements WorkoutRepo{
 		List<Workout> w = tQ.getResultList();
 		return w;
 	}
+
+	@Transactional(value = TxType.REQUIRED)
+	public Workout changeWorkout(int id, Workout newWorkout) {
+		Workout w = findWorkout(id);
+		w.setAll(newWorkout);
+		return w;
+	}
+	
+	
 }

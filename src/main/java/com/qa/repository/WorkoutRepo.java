@@ -11,4 +11,6 @@ public interface WorkoutRepo {
 	public Workout findWorkout(int id);
 	
 	public List<Workout> findWorkoutByUser(int id);
+	
+	public Workout changeWorkout(int id, Workout newWorkout);
 }
