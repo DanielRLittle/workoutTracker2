@@ -33,6 +33,9 @@ function getWorkouts() {
         console.log(workoutData);
         for (let x of workoutData) {
             console.log(x);
+            console.log(x.id);
+            console.log(x.workoutName);
+            console.log(x.workoutDescription);
             const myTr = document.createElement("tr");
             const myTh = document.createElement("th");
             const myTd = document.createElement("td");
