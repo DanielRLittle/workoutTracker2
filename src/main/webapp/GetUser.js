@@ -1,7 +1,6 @@
 const getUserPage = "./userPage.html"
 const getLoginPage = "./loginPage.html"
-let UserID;
-const urlWorkouts = `http://35.242.137.2:8080/workoutTracker-1.0/api/workout/${userID}`
+
 
     
 let output = window.sessionStorage.getItem("User");
@@ -26,6 +25,7 @@ function getUser() {
 }
 
 function getWorkouts() {
+    const urlWorkouts = `http://35.242.137.2:8080/workoutTracker-1.0/api/workout/${userID}`
     userID = output.id;
     requestData(urlWorkouts, "GET", "").then((x) => {
         let workoutData = JSON.parse(x.responseText);
