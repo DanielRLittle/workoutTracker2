@@ -32,6 +32,19 @@ function getWorkouts() {
         console.log(workoutData);
         for (let x of workoutData) {
             console.log(x);
+            const myTr = document.createElement("tr");
+            const myTh = document.createElement("th");
+            let att = document.createAttribute("scope");
+            att.value = "row";
+            myTh.setAttributeNode(att);
+            myTh.innerText = x.id;
+            myTr.appendChild(myTh);
+            const myTd = document.createElement("td");
+            myTd.innertext = x.workoutName;
+            myTr.appendChild(myTd);
+            const myTd2 = document.createElement("td");
+            myTd2.innertext = x.workoutDescription;
+            myTr.appendChild(myTd2);
         }
     });
 }
