@@ -35,18 +35,18 @@ function getWorkouts() {
             console.log(x);
             const myTr = document.createElement("tr");
             const myTh = document.createElement("th");
+            const myTd = document.createElement("td");
+            const myTd2 = document.createElement("td");
             let att = document.createAttribute("scope");
             att.value = "row";
             myTh.setAttributeNode(att);
             myTh.innerText = x.id;
             myTr.appendChild(myTh);
             table.appendChild(myTr);
-            const myTd = document.createElement("td");
-            myTd.innertext = x[1];
+            myTd.innertext = x.workoutName;
             myTr.appendChild(myTd);
             table.appendChild(myTr);
-            const myTd2 = document.createElement("td");
-            myTd2.innertext = x[2];
+            myTd2.innertext = x.workoutDescription;
             myTr.appendChild(myTd2);
             table.appendChild(myTr);
         }
