@@ -42,11 +42,11 @@ function getWorkouts() {
             myTr.appendChild(myTh);
             table.appendChild(myTr);
             const myTd = document.createElement("td");
-            myTd.innertext = x.workoutName;
+            myTd.innertext = x[1];
             myTr.appendChild(myTd);
             table.appendChild(myTr);
             const myTd2 = document.createElement("td");
-            myTd2.innertext = x.workoutDescription;
+            myTd2.innertext = x[2];
             myTr.appendChild(myTd2);
             table.appendChild(myTr);
         }
