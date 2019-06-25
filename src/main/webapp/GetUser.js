@@ -30,6 +30,9 @@ function getWorkouts() {
     requestData(urlWorkouts, "GET", "").then((x) => {
         let workoutData = JSON.parse(x.responseText);
         console.log(workoutData);
+        for (let x of workoutData) {
+            console.log(x);
+        }
     });
 }
 
@@ -38,7 +41,6 @@ function displayUser() {
     document.getElementById("returningID").innerText = output.id;
     document.getElementById("firstName").innerText = output.firstName;
     document.getElementById("lastName").innerText = output.lastName;
-    // window.sessionStorage.removeItem("User");
 }
 
 function checkUser() {
