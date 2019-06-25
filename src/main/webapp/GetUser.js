@@ -40,9 +40,11 @@ function getWorkouts() {
             myTh.setAttributeNode(att);
             myTh.innerText = x.id;
             myTr.appendChild(myTh);
+            table.appendChild(myTr);
             const myTd = document.createElement("td");
             myTd.innertext = x.workoutName;
             myTr.appendChild(myTd);
+            table.appendChild(myTr);
             const myTd2 = document.createElement("td");
             myTd2.innertext = x.workoutDescription;
             myTr.appendChild(myTd2);
