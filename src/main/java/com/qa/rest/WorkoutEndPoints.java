@@ -75,7 +75,7 @@ public class WorkoutEndPoints {
 	
 	@DELETE
 	@Path("/workouts/{workout_id}")
-	public Response removeWorkout(@PathParam("id") int id) {
+	public Response removeWorkout(@PathParam("workout_id") int id) {
 		if (wr.findWorkout(id).equals(null)) {
 			return Response.status(Status.NOT_FOUND).build();
 		}
