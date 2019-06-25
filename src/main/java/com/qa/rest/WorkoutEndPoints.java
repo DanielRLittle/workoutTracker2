@@ -45,7 +45,7 @@ public class WorkoutEndPoints {
 			return Response.status(Status.NOT_FOUND).build();
 		}
 		List<Workout> w = wr.findWorkoutByUser(id);
-		return Response.ok(w).build();
+		return Response.ok(w).build(); 
 	}
 	
 	@PUT
