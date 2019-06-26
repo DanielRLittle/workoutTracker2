@@ -45,7 +45,7 @@ function getWorkouts() {
             myTh.innerText = x.id;
             myTr.appendChild(myTh);
             // let wName = document.createTextNode(x.workoutName);
-            myTd.innertext = wName;
+            myTd.innertext = x.workoutName;
             myTr.appendChild(myTd);
             table.appendChild(myTr);
             const myTd2 = document.createElement("td");
