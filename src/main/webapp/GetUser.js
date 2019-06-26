@@ -33,26 +33,36 @@ function getWorkouts() {
         console.log(workoutData);
         for (let x of workoutData) {
             console.log(x);
-            console.log(x.id);
-            console.log(x.workoutName);
-            console.log(x.workoutDescription);
             const myTr = document.createElement("tr");
-            const myTh = document.createElement("th");
-            const myTd = document.createElement("td");
-            let att = document.createAttribute("scope");
-            att.value = "row";
-            myTh.setAttributeNode(att);
-            myTh.innerText = x.id;
-            myTr.appendChild(myTh);
-            // let wName = document.createTextNode(x.workoutName);
-            myTd.innertext = x.workoutName;
-            myTr.appendChild(myTd);
-            table.appendChild(myTr);
-            const myTd2 = document.createElement("td");
-            myTd2.innertext = x.workoutDescription;
-            myTr.appendChild(myTd2);
-            table.appendChild(myTr);
+            for (let y in x) {
+                const td = document.createElement("td");
+                td.innerText = x[y];
+                myTr.appendChild(td);
+                table.appendChild(myTr);
+            }
         }
+        // for (let x of workoutData) {
+        //     console.log(x);
+        //     console.log(x.id);
+        //     console.log(x.workoutName);
+        //     console.log(x.workoutDescription);
+        //     const myTr = document.createElement("tr");
+        //     const myTh = document.createElement("th");
+        //     const myTd = document.createElement("td");
+        //     let att = document.createAttribute("scope");
+        //     att.value = "row";
+        //     myTh.setAttributeNode(att);
+        //     myTh.innerText = x.id;
+        //     myTr.appendChild(myTh);
+        //     // let wName = document.createTextNode(x.workoutName);
+        //     myTd.innertext = x.workoutName;
+        //     myTr.appendChild(myTd);
+        //     table.appendChild(myTr);
+        //     const myTd2 = document.createElement("td");
+        //     myTd2.innertext = x.workoutDescription;
+        //     myTr.appendChild(myTd2);
+        //     table.appendChild(myTr);
+        // }
     });
 }
 
