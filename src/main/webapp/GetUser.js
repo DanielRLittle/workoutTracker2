@@ -21,7 +21,6 @@ function getUser() {
     setTimeout(() => {
         document.getElementById("failed").innerText = "Incorrect login details, please enter a valid name."
     }, 500);
-    
 }
 
 function getWorkouts() {
@@ -40,29 +39,11 @@ function getWorkouts() {
                 myTr.appendChild(td);
                 table.appendChild(myTr);
             }
+            const myTd = document.createElement("td");
+            const wDel = document.createElement("button");
+            myTr.appendChild(wDel);
+            myTr.appendChild(myTd);
         }
-        // for (let x of workoutData) {
-        //     console.log(x);
-        //     console.log(x.id);
-        //     console.log(x.workoutName);
-        //     console.log(x.workoutDescription);
-        //     const myTr = document.createElement("tr");
-        //     const myTh = document.createElement("th");
-        //     const myTd = document.createElement("td");
-        //     let att = document.createAttribute("scope");
-        //     att.value = "row";
-        //     myTh.setAttributeNode(att);
-        //     myTh.innerText = x.id;
-        //     myTr.appendChild(myTh);
-        //     // let wName = document.createTextNode(x.workoutName);
-        //     myTd.innertext = x.workoutName;
-        //     myTr.appendChild(myTd);
-        //     table.appendChild(myTr);
-        //     const myTd2 = document.createElement("td");
-        //     myTd2.innertext = x.workoutDescription;
-        //     myTr.appendChild(myTd2);
-        //     table.appendChild(myTr);
-        // }
     });
 }
 
