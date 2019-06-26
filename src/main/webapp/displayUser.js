@@ -1,1 +1,2 @@
 fillUser(output);
+getWorkouts();
