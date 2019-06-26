@@ -41,7 +41,8 @@ function getWorkouts() {
             }
             const myTd = document.createElement("td");
             const wDel = document.createElement("button");
-            myTr.appendChild(wDel);
+            wDel.innerText = "Remove";
+            myTd.appendChild(wDel);
             myTr.appendChild(myTd);
         }
     });
