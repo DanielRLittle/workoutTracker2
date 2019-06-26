@@ -45,7 +45,8 @@ function getWorkouts() {
             myTh.setAttributeNode(att);
             myTh.innerText = x.id;
             myTr.appendChild(myTh);
-            myTd.innertext = x.workoutName;
+            let wName = document.createTextNode(x.workoutName);
+            myTd.innertext = wName;
             myTr.appendChild(myTd);
             myTd2.innertext = x.workoutDescription;
             myTr.appendChild(myTd2);
