@@ -40,6 +40,9 @@ function getWorkouts() {
                 table.appendChild(myTr);
             }
             const myTd = document.createElement("td");
+            const wEdit = document.createElement("button");
+            wEdit.innerText = "Edit";
+            myTd.appendChild(wEdit);
             const wDel = document.createElement("button");
             wDel.innerText = "Remove";
             myTd.appendChild(wDel);
