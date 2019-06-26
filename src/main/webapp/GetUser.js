@@ -39,15 +39,16 @@ function getWorkouts() {
             const myTr = document.createElement("tr");
             const myTh = document.createElement("th");
             const myTd = document.createElement("td");
-            const myTd2 = document.createElement("td");
             let att = document.createAttribute("scope");
             att.value = "row";
             myTh.setAttributeNode(att);
             myTh.innerText = x.id;
             myTr.appendChild(myTh);
-            let wName = document.createTextNode(x.workoutName);
+            // let wName = document.createTextNode(x.workoutName);
             myTd.innertext = wName;
             myTr.appendChild(myTd);
+            table.appendChild(myTr);
+            const myTd2 = document.createElement("td");
             myTd2.innertext = x.workoutDescription;
             myTr.appendChild(myTd2);
             table.appendChild(myTr);
