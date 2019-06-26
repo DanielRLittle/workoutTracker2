@@ -45,10 +45,8 @@ function getWorkouts() {
             myTh.setAttributeNode(att);
             myTh.innerText = x.id;
             myTr.appendChild(myTh);
-            table.appendChild(myTr);
             myTd.innertext = x.workoutName;
             myTr.appendChild(myTd);
-            table.appendChild(myTr);
             myTd2.innertext = x.workoutDescription;
             myTr.appendChild(myTd2);
             table.appendChild(myTr);
