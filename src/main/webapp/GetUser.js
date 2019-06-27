@@ -88,7 +88,7 @@ function addWorkout() {
     const urlAddWorkout = `http://35.242.137.2:8080/workoutTracker-1.0/api/workout/${userID}`;
     if (input1 !== "" && input2 !== "") {
         let w = new Workout(input1, input2);
-        console.log(workout);
+        console.log(w);
         requestData(urlAddWorkout, "PUT", w);
     }
     else {
