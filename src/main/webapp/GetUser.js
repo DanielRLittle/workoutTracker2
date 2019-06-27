@@ -75,6 +75,7 @@ function inputWorkout() {
     const but = document.createElement("button");
     but.innerText = "done";
     but.setAttribute("type", "button");
+    but.setAttribute("onclick", "addWorkout()");
     myTd4.appendChild(but);
     myTr.appendChild(myTd4);
     table.appendChild(myTr);
