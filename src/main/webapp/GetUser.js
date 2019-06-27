@@ -25,7 +25,7 @@ function getUser() {
 
 function getWorkouts() {
     let userID = output.id;
-    const urlWorkouts = `http://35.242.137.2:8080/workoutTracker-1.0/api/workout/${userID}`
+    const urlWorkouts = `http://35.242.137.2:8080/workoutTracker-1.0/api/workout/${userID}`;
     let table = document.getElementById("workoutTable");
     requestData(urlWorkouts, "GET", "").then((x) => {
         let workoutData = JSON.parse(x.responseText);
@@ -49,6 +49,11 @@ function getWorkouts() {
             myTr.appendChild(myTd);
         }
     });
+}
+
+function addWorkout() {
+    let userID = output.id;
+    const urlAddWorkout = `http://35.242.137.2:8080/workoutTracker-1.0/api/workout/${userID}`;
 }
 
 function displayUser() {
