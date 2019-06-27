@@ -42,18 +42,57 @@ function getWorkouts() {
             const myTd = document.createElement("td");
             const wEdit = document.createElement("button");
             wEdit.innerText = "Edit";
+            wEdit.setAttribute("type", "button");
             myTd.appendChild(wEdit);
             const wDel = document.createElement("button");
             wDel.innerText = "Remove";
+            wDel.setAttribute("type", "button");
             myTd.appendChild(wDel);
             myTr.appendChild(myTd);
         }
     });
 }
 
+function inputWorkout() {
+    const myTr = document.createElement("tr");
+    const table = document.getElementById("workoutTable");
+    const myTd = document.createElement("td");
+    myTr.appendChild(myTd);
+    table.appendChild(myTr);
+    const myTd2 = document.createElement("td");
+    const inp1 = document.createElement("input");
+    inp1.setAttribute("id", "inp1");
+    myTd2.appendChild(inp1);
+    myTr.appendChild(myTd2);
+    table.appendChild(myTr);
+    const myTd3 = document.createElement("td");
+    const inp2 = document.createElement("input");
+    inp2.setAttribute("id", "inp2");
+    myTd3.appendChild(inp2);
+    myTr.appendChild(myTd3);
+    table.appendChild(myTr);
+    const myTd4 = document.createElement("td");
+    const but = document.createElement("button");
+    but.innerText = "done";
+    but.setAttribute("type", "button");
+    myTd4.appendChild(but);
+    myTr.appendChild(myTd4);
+    table.appendChild(myTr);
+}
+
 function addWorkout() {
     let userID = output.id;
+    let input1 = document.getElementById("inp1").value;
+    let input2 = document.getElementById("inp2").value;
     const urlAddWorkout = `http://35.242.137.2:8080/workoutTracker-1.0/api/workout/${userID}`;
+    if (input1 !== "" && input2 !== "") {
+        let w = new Workout(input1, input2);
+        console.log(workout);
+        requestData(urlAddWorkout, "PUT", w);
+    }
+    else {
+        console.log("Can't send blank fields!");
+    }
 }
 
 function displayUser() {
