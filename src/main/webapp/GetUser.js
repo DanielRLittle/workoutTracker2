@@ -44,12 +44,11 @@ function getWorkouts() {
             const myTd = document.createElement("td");
             const wEdit = document.createElement("button");
             wEdit.innerText = "Edit";
-            wEdit.setAttribute("type", "button");
+            wEdit.setAttribute("type", "button").setAttribute("onclick", `inputUpdateWorkout(${counter})`).setAttribute("id", `${counter}`+5000);
             myTd.appendChild(wEdit);
             const wDel = document.createElement("button");
             wDel.innerText = "Remove";
-            wDel.setAttribute("type", "button");
-            wDel.setAttribute("onclick", `removeWorkout(${counter})`);
+            wDel.setAttribute("type", "button").setAttribute("onclick", `removeWorkout(${counter})`).setAttribute("id", counter+10000);
             myTd.appendChild(wDel);
             myTr.appendChild(myTd);
             counter ++;

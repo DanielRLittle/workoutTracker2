@@ -9,7 +9,7 @@ function removeWorkout(id) {
     window.location.reload(true);
 }
 
-function updateWorkout(id) {
+function inputUpdateWorkout(id) {
     let tr = document.getElementById(id);
     let inp1 = document.createElement("input");
     let inp2 = document.createElement("input");
@@ -19,4 +19,8 @@ function updateWorkout(id) {
     td1.appendChild(inp1);
     let td2 = tr.children[2];
     td2.appendChild(inp2);
+    let editRemove = document.getElementById(5000+id);
+    editRemove.parentNode.removeChild("button");
+    let removeRemove = document.getElementById(10000+id);
+    removeRemove.parentNode.removeChild("button");
 }
