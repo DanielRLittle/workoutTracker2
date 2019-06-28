@@ -8,3 +8,15 @@ function removeWorkout(id) {
     requestData(wDelURL, "DELETE", "");
     window.location.reload(true);
 }
+
+function updateWorkout(id) {
+    let tr = document.getElementById(id);
+    let inp1 = document.createElement("input");
+    let inp2 = document.createElement("input");
+    let td1 = tr.children[1];
+    td1.innerText = "";
+    td2.innerText = "";
+    td1.appendChild(inp1);
+    let td2 = tr.children[2];
+    td2.appendChild(inp2);
+}
