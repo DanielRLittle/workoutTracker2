@@ -27,12 +27,14 @@ function getWorkouts() {
     let userID = output.id;
     const urlWorkouts = `http://35.242.137.2:8080/workoutTracker-1.0/api/workout/${userID}`;
     let table = document.getElementById("workoutTable");
+    let counter = 0;
     requestData(urlWorkouts, "GET", "").then((x) => {
         let workoutData = JSON.parse(x.responseText);
         console.log(workoutData);
         for (let x of workoutData) {
             console.log(x);
             const myTr = document.createElement("tr");
+            myTr.setAttribute("id", counter);
             for (let y in x) {
                 const td = document.createElement("td");
                 td.innerText = x[y];
@@ -47,8 +49,10 @@ function getWorkouts() {
             const wDel = document.createElement("button");
             wDel.innerText = "Remove";
             wDel.setAttribute("type", "button");
+            wDel.setAttribute("onclick", `removeWorkout(${counter})`);
             myTd.appendChild(wDel);
             myTr.appendChild(myTd);
+            counter ++;
         }
     });
 }
