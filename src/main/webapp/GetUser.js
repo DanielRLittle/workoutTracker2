@@ -94,6 +94,7 @@ function addWorkout() {
     else {
         console.log("Can't send blank fields!");
     }
+    window.location.reload(true);
 }
 
 function displayUser() {
