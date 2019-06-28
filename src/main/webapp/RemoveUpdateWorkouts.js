@@ -15,9 +15,9 @@ function inputUpdateWorkout(id) {
     let inp2 = document.createElement("input");
     let td1 = tr.children[1];
     td1.innerText = "";
-    td2.innerText = "";
     td1.appendChild(inp1);
     let td2 = tr.children[2];
+    td2.innerText = "";
     td2.appendChild(inp2);
     let editRemove = document.getElementById(5000+id);
     editRemove.parentNode.removeChild("button");
